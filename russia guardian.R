@@ -6,7 +6,7 @@ articles <- get_guardian(keywords = "russia",
                          section = "football",
                          from.date = "2018-06-14",
                          to.date = "2018-07-10",
-                         api.key = "abfe0675-bcd3-455c-8ee8-16ef600b58e9")
+                         api.key = "XXXXXXXXXXXX") ### For football 
 
 
 
@@ -15,8 +15,12 @@ articles_1 <- get_guardian(keywords = "kremlin",
                          section = "world",
                          from.date = "2017-06-14",
                          to.date = "2018-07-15",
-                         api.key = "abfe0675-bcd3-455c-8ee8-16ef600b58e9")
+                           api.key = "XXXXXXXXXXXXX") ### For politics
 
+##################
+##################
+##################
+# For two datasets
 total_articles <- rbind(articles, articles_1)
 
 dim(total_articles)
@@ -209,7 +213,7 @@ write.csv(collocations, file = "correct_collocations.csv")
 ###################################################
 ###################################################
 ###################################################
-
+# Only for football dataset
 
 dim(articles)
 
@@ -401,7 +405,7 @@ write.csv(collocations, file = "correct_collocations_only_football.csv")
 ###############################################################################
 ###############################################################################
 ###############################################################################
-
+# For political dataset
 dim(articles_1)
 
 colnames(articles_1)
